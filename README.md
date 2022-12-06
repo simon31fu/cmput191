@@ -14,22 +14,50 @@ The goal of the assignment was to examine the concept of purchasing power parity
 
 ## Our Analysis
 
-Let's start by creating a few user defined functions:
+### Creating functions
+
+Let's start by creating a few user defined functions, which we drew from labs and assignments:
+
 ![UDFs](1.png "UDFs")
 
+These functions make displaying and scraping tables more efficient, and was the first cell we coded.
 
-
-These functions make displaying and scraping tables more efficient, and was the first cell we coded incase we needed to display or scrape multiple tables.
+### Importing Data
 
 Next we create our tables:
 ![tables](2.png "Tables")
 
-We decided to first make a seperate table for each of the columns we needed, with the rationale that it would make cleaning and tidying up data further on more efficient. The first table includes Red Bull prices by country, followed by another table for country currencies and their respective currency codes, then another of exchange rates between countries, and finally one table for country tax rates.
+We imported our tables separately for the data needed, with the rationale that data cleaning would be easier on separate tables we joined later on. 
+* The first table includes Red Bull prices in USD by country (250mL can as at April 2021)
+* The second table gives country currencies and their codes and symbols
+* The third table contains exchange rates between countries' currencies and USD
+* The final table contains countries' goods and services/value-added taxes rates
 
-Then we clean our data:
+### Data Clean
+
+We then cleaned our data:
 ![clean](3.png "Tidying Up")
 
-First all the tables need to be normalized, relabelled, and formatted. The process involves relabelling columns, dropping any columns that are not needed, stripping, and splitting values (described in depth in the code cell comments). After tidying up our tables, we join them together to make one full table.
+Tables needed to be relabelled and formatted. The following cleans were made: 
+#### Red Bull Price Table: 
+* "Countries" column was relabelled as "Country"
+* "Red Bull Prices" column was relabelled as "Price"
+* "Rank" was dropped
+
+
+#### Currencies Table:
+* "Country and Currency" was replaced with "Country". A for loop was used to split the country off the currency name, and then reinserted into the table
+* "Currency Code" was dropped
+
+#### Exchange Rate Table:
+* Every year of exchange rates were dropped except 2021 (we actually just made a new table from the one column)
+* "Currency" was dropped (we only needed countries)
+
+#### Tax Rate Table
+* We stripped the phrase "Last reviewed XYZ dat" using the same procedure as the currencies table
+* We also had to manually clean extra information (notes) from the tax rates, but we waited to see which countries would be retained after the join.
+
+
 ![join](4.png "Combine")
 
 Of course, there were unexpectedly some issues:
