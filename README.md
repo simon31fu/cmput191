@@ -15,7 +15,6 @@ The goal of the assignment was to examine the concept of purchasing power parity
 ## Our Analysis
 
 ### Creating functions
-
 Let's start by creating a few user defined functions, which we drew from labs and assignments:
 
 ![UDFs](1.png "UDFs")
@@ -23,8 +22,8 @@ Let's start by creating a few user defined functions, which we drew from labs an
 These functions make displaying and scraping tables more efficient, and was the first cell we coded.
 
 ### Importing Data
-
 Next we create our tables:
+
 ![tables](2.png "Tables")
 
 We imported our tables separately for the data needed, with the rationale that data cleaning would be easier on separate tables we joined later on. 
@@ -34,11 +33,12 @@ We imported our tables separately for the data needed, with the rationale that d
 * The final table contains countries' goods and services/value-added taxes rates
 
 ### Data Clean
-
 We then cleaned our data:
+
 ![clean](3.png "Tidying Up")
 
 Tables needed to be relabelled and formatted. The following cleans were made: 
+
 #### Red Bull Price Table: 
 * "Countries" column was relabelled as "Country"
 * "Red Bull Prices" column was relabelled as "Price"
@@ -58,7 +58,6 @@ Tables needed to be relabelled and formatted. The following cleans were made:
 * We also had to manually clean extra information (notes) from the tax rates, but we waited to see which countries would be retained after the join.
 
 ### Join
-
 We proceeded to join our data.
 
 ![join](4.png "Combine")
@@ -88,12 +87,11 @@ To complete the bonus, we took our completed table, which included a tax rate co
 As we had already imported currency symbols earlier, we only needed to create a column that concatenates the respective currency symbol to the price. We did this with a loop that generated what we needed as strings, which we appeneded to a list, and used as a column to insert into the table.
 
 ### CAD Prices and Price Differences
-
 For this task, we first generated the prices in CAD using the USD prices we already had (calling the CAD price with a reference, not finding it and inserting a constant). From there, we formatted and then displayed CAD price and CAD price difference in a bar chart.
+
 ![bar](8.png "Bar Chart")
 
 ### External Factor: Human Development Index (HDI)
-
 For Q6 we decided to look at the Human Development Index (HDI), as Red Bull themselves claim (printed on every can!) that their product is "Appreciated worldwide by top athletes, students, busy professionals, and travellers on long journeys." By taking HDI to approximate volume of knowledge workers, our hypothesis is that countries with more students and professionals will have higher prices for Red Bull.
 
 Our code was fairly straightforward, as we first scraped the HDI data, cleaned it, then put it in our finished table from earlier. We used the same procedures as above.
