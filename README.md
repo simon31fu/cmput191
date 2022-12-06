@@ -24,6 +24,7 @@ These functions make displaying and scraping tables more efficient, and was the 
 ### Importing Data
 Next we create our tables:
 
+
 ![tables](2.png "Tables")
 
 We imported our tables separately for the data needed, with the rationale that data cleaning would be easier on separate tables we joined later on. 
