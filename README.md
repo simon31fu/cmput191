@@ -2,8 +2,22 @@
 
 The goal of the assignment was to examine the concept of purchasing power parity. Similar to the Big Mac index tool that examines the same concept, we created a similar index that instead examines the prices of Red Bull by country.
 
+### Purchasing Power Parity
+* "The rates of currency conversion that try to equalize the purchasing power of different currencies, by eliminating the different price levels between countries (OECD) (https://data.oecd.org/conversion/purchasing-power-parities-ppp.htm)
+* Macroeconomic analysis measure
+* Can be used to predict and forecast exchange rates, create economic policy, and examine real changes in foreign exchange securities and derivatives
+* Can also be used to normalise GDP figures
+
+### Why a Red Bull Index?
+* Red Bull is the archetype brand of the energy drink market, having created the market when it first released its product in 1987. Over 10 billion cans have been sold since (https://www.redbull.com/int-en/energydrink/red-bull-is-safe)
+* Red Bull is also the most valuable energy drink brand in the world, according to Interbrand (https://interbrand.com/best-global-brands/red-bull/), and uses premium positioning to resist price adjustments due to competing brands
+
+## Our Analysis
+
 Let's start by creating a few user defined functions:
 ![UDFs](1.png "UDFs")
+
+
 
 These functions make displaying and scraping tables more efficient, and was the first cell we coded incase we needed to display or scrape multiple tables.
 
